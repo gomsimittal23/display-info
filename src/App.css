@@ -1,38 +1,182 @@
+*{
+  margin : 0;
+  padding: 0;
+}
+
 .App {
+  padding: 80px 160px;
+  background-color: rgb(235, 233, 232);
+}
+
+.content{
+  padding: 40px 80px;
+  background-color: rgb(245, 239, 239);
+  /* min-height: 800px; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+.heading{
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+}
+.image{
+  flex: 0.3;
+}
+.image > img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.info{
+  flex: 0.8;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: space-around;
+}
+.info > h1{
+  font-size: 48px;
+  color: red;
+  text-decoration: underline;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  width: 200px;
+  height: 68px;
+  padding: 8px;
+  background-color: white;
+  /* border: 1px solid green; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.card > p{
+  font-size: 12px;
+}
+.mail{
+  color: red;
+}
+.grid{
+  display: grid;
+  row-gap: 16px;
+  max-width: 1000px;
+  margin: auto;
+  /* align-items: center;
+  justify-content: center; */
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1452px) {
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+  
+  .App{
+    padding: 64px 140px;
+  }
+  .content{
+    padding: 32px 72px;
+  }
+}
+@media (max-width: 1200px) {
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+@media (max-width: 1152px) {
+  .info > h1{
+    font-size: 32px;
+  }
+}
+@media (max-width: 1016px) {
+  .info > h1{
+    font-size: 28px;
+  }
+  .image > img{
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 912px) {
+  .App{
+    padding: 40px 80px;
+  }
+  .content{
+    padding: 20px 40px;
+  }
+  .info{
+    /* font-size: 24px; */
+    padding-left: 10px;
+  }
+  .info > h1{
+    font-size: 22px;
+  }
+  
+}
+@media (max-width: 732px) {
+  .App{
+    padding: 20px 40px;
+  }
+  .content{
+    padding: 10px 20px;
+  }
+  .info{
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  .info > h1{
+    font-size: 16px;
+  }
+  
+}
+@media (max-width: 600px) {
+  .info{
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  .info > h1{
+    font-size: 16px;
+  }
+  .grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 500px){
+  .App{
+    padding: 12px 20px;
+  }
+  .content{
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 420px){
+  .App{
+    padding: 0;
+  }
+  .content{
+    padding: 8px 12px;
+  }
+  .heading{
+    padding: 20px;
+  }
+  .info{
+    font-size: 12px;
+    padding-left: 10px;
+  }
+  .info > h1{
+    font-size: 14px;
   }
 }
